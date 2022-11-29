@@ -12,12 +12,12 @@ int n = Convert.ToInt32(Console.ReadLine());
 Console.Write("Задайте m - колличество столбцов. m =  ");
 int m = Convert.ToInt32(Console.ReadLine());
 
-double [,] array2D = new double [n, m];
+double[,] array2D = new double[n, m];
 
 for (int i = 0; i < array2D.GetLength(0); i++)
 {
     System.Console.WriteLine();
-    
+
     for (int j = 0; j < array2D.GetLength(1); j++)
     {
         array2D[i, j] = Math.Round((new Random().Next(-10, 10) + new Random().NextDouble()), 2);
@@ -27,5 +27,3 @@ for (int i = 0; i < array2D.GetLength(0); i++)
     Console.WriteLine();
 }
 Console.WriteLine();
-
-
