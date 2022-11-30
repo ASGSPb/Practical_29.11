@@ -11,11 +11,8 @@
 Console.Clear();
 Console.WriteLine("В 2D массиве  ");
 
-// int n = new Random().Next(2, 5);
-// int m = new Random().Next(2, 5);
-
-int n = 4;
-int m = 5;
+int n = new Random().Next(2, 5);
+int m = new Random().Next(2, 5);
 
 int[,] array2D = FillingArray2D(n, m);
 
@@ -34,17 +31,17 @@ for (int i = 0; i < n; i++)
 }
 Console.WriteLine();
 
-int [,] FillingArray2D(int n, int m)
+int[,] FillingArray2D(int n, int m)
 {
     int[,] array2D = new int[n, m];
 
-    for (int i = 0; i < array2D.GetLength(1); i++)
+    for (int j = 0; j < array2D.GetLength(1); j++)
     {
         System.Console.WriteLine();
 
-        for (int j = 0; j < array2D.GetLength(0); j++)
+        for (int i = 0; i < array2D.GetLength(0); i++)
         {
-            array2D[i, j] = new Random().Next(0,10);
+            array2D[i, j] = new Random().Next(0, 10);
 
             Console.Write(String.Format("{0,6}", array2D[i, j]) + " ");
         }
